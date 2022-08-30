@@ -59,14 +59,17 @@ shape = SubResource( 7 )
 [node name="Kugel" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.46825, 0 )
 mass = 0.0479592
+gravity_scale = 6.0
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Kugel"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = SubResource( 3 )
 skin = SubResource( 4 )
 material/0 = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Kugel"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 shape = SubResource( 5 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
