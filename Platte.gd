@@ -37,9 +37,9 @@ func _process(delta):
 		if self.rotation.x < MAX_ROT:
 			rotate_x(ANGLE)
 			
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("right"):
 		if self.rotation.z > -MAX_ROT:
 			rotate_z(-ANGLE)
-	elif Input.is_action_pressed("right"):
+	elif Input.is_action_pressed("left"):
 		if self.rotation.z < MAX_ROT:
 			rotate_z(ANGLE)
