@@ -19,9 +19,16 @@ func _process(delta):
 
 func _on_Ziel_body_entered(body):
 	print("win: " + str(body))
+	$Control/Win.visible = true
+	get_tree().paused = true
 
 func _reset():
 	$Platte.rotation = $Platte.startrotation
 	$Kugel.translation = $Kugel.startposition
 	$Kugel.linear_velocity = Vector3.ZERO
 	$Kugel.angular_velocity = Vector3.ZERO
+
+func _on_Win_pressed():
+	$Control/Win.visible = false
+	get_tree().paused = false
+	_reset()

@@ -39,9 +39,21 @@ script = ExtResource( 3 )
 margin_right = 40.0
 margin_bottom = 40.0
 
+[node name="Win" type="Button" parent="Control"]
+pause_mode = 2
+visible = false
+margin_left = 392.0
+margin_top = 231.0
+margin_right = 652.0
+margin_bottom = 368.0
+text = "WIn"
+icon_align = 1
+
 [node name="Debug" type="Label" parent="Control"]
-margin_right = 162.0
-margin_bottom = 40.0
+margin_left = 1.0
+margin_top = 3.0
+margin_right = 157.0
+margin_bottom = 38.0
 rect_scale = Vector2( 2, 2 )
 
 [node name="Camera" type="Camera" parent="."]
@@ -75,7 +87,7 @@ mesh = SubResource( 6 )
 skeleton = NodePath("../..")
 
 [node name="Ziel" type="Area" parent="Platte"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0394468, 0.156672, 7.47276 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0394468, 0.156672, -4.63255 )
 script = ExtResource( 5 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Platte/Ziel"]
@@ -107,4 +119,5 @@ shape = SubResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.9551, 0 )
 shadow_enabled = true
 
+[connection signal="pressed" from="Control/Win" to="." method="_on_Win_pressed"]
 [connection signal="body_entered" from="Platte/Ziel" to="." method="_on_Ziel_body_entered"]
