@@ -9,16 +9,22 @@ var MAX_ROT = deg2rad(45)
 
 onready var startrotation
 
+var rotation_factor = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	startrotation = self.rotation
+	var os = OS.get_name()
+	
+	if os == "iOS":
+		rotation_factor = -1
 
 func rotate_by_gyro(p_gyro, p_basis, p_delta):
 	var rotate = Basis()
 
-	rotate = rotate.rotated(p_basis.x, p_gyro.x * p_delta)
+	rotate = rotate.rotated(p_basis.x, rotation_factor * p_gyro.x * p_delta)
 	#rotate = rotate.rotated(p_basis.y, p_gyro.y * p_delta)
-	rotate = rotate.rotated(p_basis.z, -p_gyro.y * p_delta)
+	rotate = rotate.rotated(p_basis.z, rotation_factor * -p_gyro.y * p_delta)
 
 	return rotate * p_basis
 
