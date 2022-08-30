@@ -17,6 +17,9 @@ func _process(delta):
 	if $Kugel.translation.y < -20:
 		_reset()
 
+func _on_Ziel_body_entered(body):
+	print("win: " + str(body))
+
 func _reset():
 	$Platte.rotation = $Platte.startrotation
 	$Kugel.translation = $Kugel.startposition
