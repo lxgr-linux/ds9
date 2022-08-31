@@ -112,7 +112,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.35254, 4.56803, 1.76442 )
 shape = SubResource( 11 )
 
 [node name="Kugel" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.88311, 10.1395, -16.6649 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.88311, 7.91636, -16.6649 )
 mass = 0.0479592
 gravity_scale = 6.0
 continuous_cd = true
