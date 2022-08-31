@@ -16,12 +16,15 @@ func _ready():
 func _process(delta):
 	$Control2/Debug.text = "Gyroscope: " + str(Input.get_gyroscope())
 	if $Kugel.translation.y < -20:
-		self.count += 1
-		_reset()
+		self._death()
+		
+		
+func _death():
+	self.count += 1
+	_reset()
 
 func _set_count_label():
 	$Control2/Counter.text = "Tries: " + str(self.count)
-	
 
 func _on_Ziel_body_entered(body):
 	print("win: " + str(body))
@@ -40,3 +43,6 @@ func _on_Win_pressed():
 	get_tree().paused = false
 	self.count = 0
 	_reset()
+
+func _on_TodesZone_body_entered(body):
+	_death()
