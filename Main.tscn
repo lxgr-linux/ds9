@@ -9,6 +9,7 @@
 [ext_resource path="res://Techniker_Krankenkasse_2016_logo.svg" type="Texture" id=7]
 
 [sub_resource type="CylinderShape" id=13]
+height = 0.184327
 radius = 1.5487
 
 [sub_resource type="SpatialMaterial" id=12]
@@ -85,7 +86,7 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0394468, 0.156672, -4.63255 )
 
 [node name="Mesh" type="CollisionShape" parent="Platte/TodesZone"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58523, 4.1938, 18.6803 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58523, 4.71155, 18.6803 )
 shape = SubResource( 13 )
 
 [node name="Ziel" type="Area" parent="Platte"]
@@ -114,7 +115,11 @@ shape = SubResource( 11 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.88311, 10.1395, -16.6649 )
 mass = 0.0479592
 gravity_scale = 6.0
+continuous_cd = true
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="MeshInstance" type="MeshInstance" parent="Kugel"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
