@@ -39,6 +39,14 @@ margin_right = 159.0
 margin_bottom = 42.0
 rect_scale = Vector2( 2, 2 )
 
+[node name="Counter" type="Label" parent="Control2"]
+margin_left = 4.0
+margin_top = 45.0
+margin_right = 134.0
+margin_bottom = 116.0
+rect_scale = Vector2( 2, 2 )
+text = "count"
+
 [node name="Control" type="Control" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
