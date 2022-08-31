@@ -13,7 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Control/Debug.text = "Gyroscope: " + str(Input.get_gyroscope())
+	$Control2/Debug.text = "Gyroscope: " + str(Input.get_gyroscope())
 	if $Kugel.translation.y < -20:
 		_reset()
 
