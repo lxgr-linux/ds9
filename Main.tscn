@@ -78,7 +78,7 @@ mesh = SubResource( 9 )
 skeleton = NodePath("../..")
 
 [node name="CollisionShape" type="CollisionShape" parent="Platte/Ziel"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25743, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25743, 1.15737 )
 shape = SubResource( 10 )
 
 [node name="labyrinth" type="MeshInstance" parent="Platte"]
